@@ -1,0 +1,53 @@
+package entities;
+
+public class Employees {
+	private int id;
+	private String name;
+	private double salary;
+	private double percentage;
+	
+	public Employees(int id, String name, double salary, double percentage) {
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.percentage = percentage;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+		
+	public double getPercentage() {
+		return percentage;
+	}
+	
+	public void aumento(double percentage) {
+		this.percentage = (salary * percentage)/100;
+	}
+	
+	public String toString() {
+		return  id
+				+ (", ")
+				+ name
+				+(", ")
+				+salary;
+	}
+	
+	
+}
